@@ -3,6 +3,7 @@ body {
 }
 
 /*TODO: Вынести в общий файл.*/
+/*TODO: Добавить варианты шрифта разного веса.*/
 @font-face {
     font-family: Museo Sans Cyrl;
     src: url("../Assets/fonts/museosanscyrl_100.otf") format("opentype");
@@ -21,6 +22,21 @@ body {
     height: 38px;
 }
 
+.product-price-coin {
+    width: 14px;
+    height: 14px;
+}
+
+.product-price-currency-glyph {
+    width: 15px;
+    height: 13px;
+}
+
+.product-icon {
+    width: 39px;
+    height: 39px;
+}
+
 /*Шрифты*/
 
 .balance-header-font {
@@ -29,6 +45,7 @@ body {
     font-style: normal;
     font-size: 22px;
     line-height: 13px;
+    color: #242424;
 }
 
 .balance-font {
@@ -39,6 +56,45 @@ body {
     font-weight: 600;
     font-size: 52px;
     line-height: 43px;
+    color: #242424;
+}
+
+.products-header-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 13px;
+    color: #242424;
+}
+
+.info-link-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #242424;
+    cursor: pointer;
+}
+
+.product-price-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 13px;
+    text-align: center;
+    color: #242424;
+}
+
+.product-name-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 13px;
 }
 
 /*Основные контейнеры  для разметки*/
@@ -56,18 +112,20 @@ body {
 
 .balance-pane {
     padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 38px;
-        padding-right: 38px;
-        background: #e5e5e5;
-        width: 179px;
-        height: 210px;
+    padding-bottom: 16px;
+    padding-left: 38px;
+    padding-right: 38px;
+    background: #e5e5e5;
+    width: 179px;
+    height: 210px;
 }
 
 .products-pane {
+    padding-top: 16px;
+    padding-left: 29px;
+    padding-right: 29px;
     background: #e5e5e5;
-    padding: 10px;
-    min-height: 222px;
+    min-height: 226px;
 }
 
 .products-container {
@@ -75,14 +133,64 @@ body {
 }
 
 .products-container>* {
-    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    vertical-align: top;
 }
 
 .product-card {
     display: inline-block;
-    background: wheat;
-    height: 180px;
+    height: 170px;
     width: 190px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    background: #d8d8d8;
+}
+
+.product-card>* {
+    margin-top: 10px;
+}
+
+.discount {
+    display: inline-block;
+    width: 37px;
+    height: 18px;
+
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 13px;
+    text-align: center;
+    line-height: 17px;
+    color: #FFFFFF;
+    transform: rotate(-12.65deg);
+    background: #FF1A1A;
+    border-radius: 4px;
+}
+
+.purchase-button {
+    width: 135px;
+    height: 42px;
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: #00CD52;
+    border-radius: 5px;
+    border-width: 0px;
+    transition: 0.3s;
+}
+
+.purchase-button:hover {
+    background: #00a844;
 }
 
 

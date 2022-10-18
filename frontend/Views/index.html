@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="frontend/Views/index.css">
   <title>Меню покупки товаров</title>
@@ -19,17 +20,28 @@
     <div class="products-pane">
 
       <!--Шапка товаров с заголовком и кнпокой открытия инструкции-->
-      <div class="clearfix" style="display: block;">
-        <span style="float: left;">header</span> <span style="float: right;">tutor</span>
+      <div style="display: block;">
+        <span class="products-header-font" style="float: left;">Варианты обмена на скидку</span>
+        <span class="info-link-font" style="float: right;">Инструкция</span>
       </div>
 
       <!--Сами товары-->
-      <div>
-        <div class="products-container clearfix">
-          <div class="product-card">1</div>
-          <div class="product-card">2</div>
-          <div class="product-card">3</div>
+      <div class="products-container clearfix">
+        <div class="product-card">
+          <div>
+            <img class="product-price-coin" src="frontend/Assets/images/coin.png">
+            <span class="product-price-font">15</span>
+            <img class="product-price-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
+          </div>
+          <img class="product-icon" src="frontend/Assets/images/call_x2.svg">
+          <div>
+            <div class="discount">69%</div>
+            <span class="product-name-font">на звонки ST (x2)</span>
+          </div>
+          <button class="purchase-button">Использовать скидку</button>
         </div>
+        <div class="product-card">2</div>
+        <div class="product-card">3</div>
       </div>
     </div>
   </div>
