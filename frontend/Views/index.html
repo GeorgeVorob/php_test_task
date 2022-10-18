@@ -1,13 +1,21 @@
+<!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="frontend/Views/index.css">
   <title>Меню покупки товаров</title>
 </head>
 
 <body>
+  <!--Панель с текущим балансом-->
   <div class="page-main-container">
-    <div class="balance-pane">100500</div>
+    <div class="balance-pane">
+      <div><span class="balance-header-font">Ваш баланс:</span></div>
+      <div class="clearfix" style="margin-top: 25px;">
+        <img class="balance-coin-image" src="frontend/Assets/images/coin.png">
+        <span class="balance-font">15</span>
+        <img class="balance-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
+      </div>
+    </div>
     <div class="products-pane">
 
       <!--Шапка товаров с заголовком и кнпокой открытия инструкции-->
@@ -15,6 +23,7 @@
         <span style="float: left;">header</span> <span style="float: right;">tutor</span>
       </div>
 
+      <!--Сами товары-->
       <div>
         <div class="products-container clearfix">
           <div class="product-card">1</div>

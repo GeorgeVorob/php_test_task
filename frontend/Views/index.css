@@ -1,3 +1,47 @@
+body {
+    background-color: #F0F0F0;
+}
+
+/*TODO: Вынести в общий файл.*/
+@font-face {
+    font-family: Museo Sans Cyrl;
+    src: url("../Assets/fonts/museosanscyrl_100.otf") format("opentype");
+}
+
+/*Изображения*/
+
+.balance-coin-image {
+    width: 40px;
+    height: 40px;
+    transform: rotate(-10.32deg);
+}
+
+.balance-currency-glyph {
+    width: 46px;
+    height: 38px;
+}
+
+/*Шрифты*/
+
+.balance-header-font {
+    float: left;
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-size: 22px;
+    line-height: 13px;
+}
+
+.balance-font {
+    margin-left: 7px;
+    margin-right: 9px;
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 43px;
+}
+
+/*Основные контейнеры  для разметки*/
 .page-main-container {
     padding: 40px;
     align-items: center;
@@ -11,13 +55,17 @@
 }
 
 .balance-pane {
-    background: #6A6A6A;
-    width: 255px;
-    height: 242px;
+    padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 38px;
+        padding-right: 38px;
+        background: #e5e5e5;
+        width: 179px;
+        height: 210px;
 }
 
 .products-pane {
-    background: #6A6A6A;
+    background: #e5e5e5;
     padding: 10px;
     min-height: 222px;
 }
