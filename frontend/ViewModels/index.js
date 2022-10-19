@@ -28,6 +28,7 @@ function OnPurchase(productId) {
         });
 }
 
+// Отрисовывает карточку продукта.
 function RenderProduct(product, isPurchased) {
     let productsContainer = document.getElementById("products-container");
     let discountString = product.description.substr(0, product.description.indexOf('%') + 1);
@@ -48,6 +49,7 @@ function RenderProduct(product, isPurchased) {
         `
     }
 
+    // Картинка статична, нет явной привязки к данным БД. Можно было-бы парсить ключвые слова в описании или просто рандомить её.
     productsContainer.innerHTML += `
         <div class="product-card">
             <div>
@@ -66,6 +68,7 @@ function RenderProduct(product, isPurchased) {
 
 }
 
+// Обновляет содержимое страницы.
 function UpdatePage() {
     let userInfoPromise = UpdateHeaderLoginHelper();
 

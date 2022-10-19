@@ -4,6 +4,7 @@ require_once("../DataAccessLayer/OrdersDAL.php");
 require_once("../DataAccessLayer/UsersDAL.php");
 require_once("../DataAccessLayer/ProductsDAL.php");
 
+// Считает итоговый баланс данного пользователя.
 function CalculateUserBalanceHelper($userId)
 {
     $coins = CoinsDAL::TryGetAllCoinsForUser($userId);

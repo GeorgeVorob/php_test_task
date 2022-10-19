@@ -1,6 +1,7 @@
 import { CookieService } from "../Services/CookieService.js"
 import { APIService } from "../Services/APIService.js";
 
+// Хранит логику обновления "шапки" сайта. Возможно, в рамказ ТЗ стоило вынести в index.js.
 export function UpdateHeaderLoginHelper() {
     let login = CookieService.getCookie('login')
     if (login != "") {
