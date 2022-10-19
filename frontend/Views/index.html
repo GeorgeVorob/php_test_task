@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="frontend/Views/index.css">
+  <script type="module" src="frontend/ViewModels/index.js"></script>
+  <title>Меню покупки товаров</title>
+</head>
+
+<body>
+  <!--header сайта-->
+  <div role="heading">
+    <div class="login-pane">
+      <div id="login-form" style="display: none;">
+        <form onsubmit="OnLogin(event)">
+          <input name="login" type="text" placeholder="Логин" class="login-input-field"></input>
+          <input type="submit" value="Войти" class="purchase-button" />
+        </form>
+        <div id="login-error-label" style="color: red;"></div>
+      </div>
+      <div id="logged-in-pane" style="display: none;">
+        <div id="you-logged-as-label"></div>
+        <button onclick="OnLogout()">Выйти</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Основной контент страницы-->
+  <div class="page-main-container">
+
+    <!--Панель с текущим балансом-->
+    <div class="balance-pane">
+      <div><span class="balance-header-font">Ваш баланс:</span></div>
+      <div class="clearfix" style="margin-top: 25px;">
+        <img class="balance-coin-image" src="frontend/Assets/images/coin.png">
+        <span id="balance-container" class="balance-font">15</span>
+        <img class="balance-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
+      </div>
+    </div>
+    <div class="products-pane">
+
+      <!--Шапка товаров с заголовком и кнпокой открытия инструкции-->
+      <div style="display: block;">
+        <span class="products-header-font" style="float: left;">Варианты обмена на скидку</span>
+        <a href="#tutorial" class="info-link-font" style="float: right;">Инструкция</a>
+      </div>
+
+      <!--Сами товары-->
+      <div id="products-container" class="products-container clearfix">
+      </div>
+    </div>
+  </div>
+
+  <!--Окно с инструкцией-->
+  <div id="tutorial" class="modal-window">
+    <div>
+      <a href="#"><img class="cross-close-button" src="frontend/Assets/images/cross.svg"></a>
+      <p class="tutorial-window-header-font">Инструкция</p>
+      <p class="tutorial-window-content-font">После публикации сделайте скрин, что вы его написали и отправьте своему
+        куратору, чтобы мы добавили вам
+        спецкурс в личный кабинет.</p>
+      <p class="tutorial-window-content-font">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum enim fermentum ornare molestie. Aliquam
+        vehicula, quam eu suscipit tincidunt, mi tellus tincidunt nisi, vel consectetur mi nibh ut leo. Curabitur orci
+        lorem, finibus sed enim nec, ultricies mattis metus. Duis aliquam at justo sit amet ultricies. Donec in erat sit
+        amet quam cursus feugiat. Vivamus nec leo augue. Curabitur egestas ex et quam laoreet laoreet. Quisque porttitor
+        pharetra sapien in fermentum. Praesent sit amet nisl dictum, tristique dolor non, egestas velit. Integer
+        lobortis turpis et justo efficitur, vel porta arcu tempus. Maecenas gravida tempor quam, id vulputate sem. Nulla
+        vestibulum accumsan semper. Suspendisse pretium ultricies luctus. Curabitur vehicula efficitur magna eget
+        interdum. </p>
+    </div>
+  </div>
+</body>
+
+</html>
