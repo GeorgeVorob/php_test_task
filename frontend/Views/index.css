@@ -97,6 +97,25 @@ body {
     line-height: 13px;
 }
 
+.tutorial-window-header-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 130%;
+    color: #242424;
+}
+
+.tutorial-window-content-font {
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+
+    color: #242424;
+}
+
 /*Основные контейнеры  для разметки*/
 .page-main-container {
     padding: 40px;
@@ -139,6 +158,7 @@ body {
     vertical-align: top;
 }
 
+/*Компоненты*/
 .product-card {
     display: inline-block;
     height: 170px;
@@ -193,6 +213,32 @@ body {
     background: #00a844;
 }
 
+
+.modal-window {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-window:target {
+    display: block;
+}
+
+.modal-window>* {
+    padding: 30px 25px 30px 25px;
+    margin: 25%;
+    background-color: #edeef0;
+}
+
+.cross-close-button {
+    float: right;
+    cursor: pointer;
+}
 
 /*
 Родительский элемент не считает свою высоту, если всего его дочерние элементы используют float. Ниже фикс проблемы. Применяется, например, к products-container.
