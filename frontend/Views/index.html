@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="frontend/Views/index.css">
+  <script type="module" src="frontend/ViewModels/index.js"></script>
   <title>Меню покупки товаров</title>
 </head>
 
@@ -10,11 +11,16 @@
   <!--header сайта-->
   <div role="heading">
     <div class="login-pane">
-      <div id="login-form">
-        <form>
-          <input type="text" placeholder="Логин" class="login-input-field"></input>
+      <div id="login-form" style="display: none;">
+        <form onsubmit="OnLogin(event)">
+          <input name="login" type="text" placeholder="Логин" class="login-input-field"></input>
           <input type="submit" value="Войти" class="purchase-button" />
         </form>
+        <div id="login-error-label" style="color: red;"></div>
+      </div>
+      <div id="logged-in-pane" style="display: none;">
+        <div id="you-logged-as-label"></div>
+        <button onclick="OnLogout()">Выйти</button>
       </div>
     </div>
   </div>
