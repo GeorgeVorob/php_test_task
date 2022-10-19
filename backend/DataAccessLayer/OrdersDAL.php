@@ -23,4 +23,18 @@ class OrdersDAL
 
         return $result;
     }
+
+    public static function AddNewPurchase($userId, $productId)
+    {
+        $conn = DbService::connectToDb();
+        try {
+            $query =
+                $conn->prepare("INSERT INTO orders_users (product_id, user_id) VALUES ( ? , ? );");
+            $query->bind_param("ii", $productId, $userId);
+
+            $query->execute();
+        } finally {
+            $conn->close();
+        }
+    }
 }

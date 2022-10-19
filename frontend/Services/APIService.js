@@ -21,4 +21,17 @@ export class APIService {
                 }
             })
     }
+
+    //TODO: сделать POST запросом.
+    static Purchase(login, productId) {
+        return fetch(`backend/EndPoints/PurchaseProduct.php?login=${login}&id=${productId}`)
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    throw new Error();
+                }
+            })
+    }
 }
