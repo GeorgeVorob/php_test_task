@@ -20,6 +20,14 @@ function OnLogout() {
     UpdatePage();
 }
 
+window.OnPurchase = OnPurchase;
+function OnPurchase(productId) {
+    APIService.Purchase(CookieService.getCookie('login'), productId)
+        .finally((res) => {
+            UpdatePage();
+        });
+}
+
 function RenderProduct(product, isPurchased) {
     let productsContainer = document.getElementById("products-container");
     let discountString = product.description.substr(0, product.description.indexOf('%') + 1);
@@ -29,7 +37,7 @@ function RenderProduct(product, isPurchased) {
 
     if (!isPurchased) {
         button = `
-    <button class="purchase-button" style="width: 135px;
+    <button onClick="OnPurchase(${product.id})" class="purchase-button" style="width: 135px;
         height: 49px;">Использовать скидку</button>
         `
     }
