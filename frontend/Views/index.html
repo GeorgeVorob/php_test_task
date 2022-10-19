@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="frontend/Views/index.css">
+  <title>Меню покупки товаров</title>
+</head>
+
+<body>
+  <!--Панель с текущим балансом-->
+  <div class="page-main-container">
+    <div class="balance-pane">
+      <div><span class="balance-header-font">Ваш баланс:</span></div>
+      <div class="clearfix" style="margin-top: 25px;">
+        <img class="balance-coin-image" src="frontend/Assets/images/coin.png">
+        <span class="balance-font">15</span>
+        <img class="balance-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
+      </div>
+    </div>
+    <div class="products-pane">
+
+      <!--Шапка товаров с заголовком и кнпокой открытия инструкции-->
+      <div style="display: block;">
+        <span class="products-header-font" style="float: left;">Варианты обмена на скидку</span>
+        <a href="#tutorial" class="info-link-font" style="float: right;">Инструкция</a>
+      </div>
+
+      <!--Сами товары-->
+      <div class="products-container clearfix">
+        <div class="product-card">
+          <div>
+            <img class="product-price-coin" src="frontend/Assets/images/coin.png">
+            <span class="product-price-font">15</span>
+            <img class="product-price-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
+          </div>
+          <img class="product-icon" src="frontend/Assets/images/call_x2.svg">
+          <div>
+            <div class="discount">69%</div>
+            <span class="product-name-font">на звонки ST (x2)</span>
+          </div>
+          <button class="purchase-button">Использовать скидку</button>
+        </div>
+        <div class="product-card">2</div>
+        <div class="product-card">3</div>
+      </div>
+    </div>
+  </div>
+
+  <!--Окно с инструкцией-->
+  <div id="tutorial" class="modal-window">
+    <div>
+      <a href="#"><img class="cross-close-button" src="frontend/Assets/images/cross.svg"></a>
+      <p class="tutorial-window-header-font">Инструкция</p>
+      <p class="tutorial-window-content-font">После публикации сделайте скрин, что вы его написали и отправьте своему
+        куратору, чтобы мы добавили вам
+        спецкурс в личный кабинет.</p>
+      <p class="tutorial-window-content-font">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum enim fermentum ornare molestie. Aliquam
+        vehicula, quam eu suscipit tincidunt, mi tellus tincidunt nisi, vel consectetur mi nibh ut leo. Curabitur orci
+        lorem, finibus sed enim nec, ultricies mattis metus. Duis aliquam at justo sit amet ultricies. Donec in erat sit
+        amet quam cursus feugiat. Vivamus nec leo augue. Curabitur egestas ex et quam laoreet laoreet. Quisque porttitor
+        pharetra sapien in fermentum. Praesent sit amet nisl dictum, tristique dolor non, egestas velit. Integer
+        lobortis turpis et justo efficitur, vel porta arcu tempus. Maecenas gravida tempor quam, id vulputate sem. Nulla
+        vestibulum accumsan semper. Suspendisse pretium ultricies luctus. Curabitur vehicula efficitur magna eget
+        interdum. </p>
+    </div>
+  </div>
+</body>
+
+</html>
