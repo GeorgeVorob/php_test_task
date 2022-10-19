@@ -7,8 +7,21 @@
 </head>
 
 <body>
-  <!--Панель с текущим балансом-->
+  <!--header сайта-->
+  <div role="heading">
+    <div class="login-pane">
+      <div id="login-form">
+        <form>
+          <input type="text" placeholder="Логин" class="login-input-field"></input>
+          <input type="submit" value="Войти" class="purchase-button" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Основной контент страницы-->
   <div class="page-main-container">
+    <!--Панель с текущим балансом-->
     <div class="balance-pane">
       <div><span class="balance-header-font">Ваш баланс:</span></div>
       <div class="clearfix" style="margin-top: 25px;">
@@ -38,7 +51,8 @@
             <div class="discount">69%</div>
             <span class="product-name-font">на звонки ST (x2)</span>
           </div>
-          <button class="purchase-button">Использовать скидку</button>
+          <button class="purchase-button" style="width: 135px;
+          height: 49px;">Использовать скидку</button>
         </div>
         <div class="product-card">2</div>
         <div class="product-card">3</div>
