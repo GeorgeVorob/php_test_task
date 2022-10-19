@@ -211,6 +211,7 @@ body {
 }
 
 .purchase-button {
+    cursor: pointer;
     padding: 7px;
     font-family: 'Museo Sans Cyrl';
     font-style: normal;
@@ -219,17 +220,30 @@ body {
     line-height: 16px;
     text-align: center;
 
-    color: #FFFFFF;
-    background: #00CD52;
+    color: black;
+    background: #fece00;
     border-radius: 5px;
     border-width: 0px;
     transition: 0.3s;
 }
 
 .purchase-button:hover {
-    background: #00a844;
+    background: #ceb02a;
 }
 
+.already-purchased-button {
+    padding: 7px;
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #00CD52;
+    border-radius: 5px;
+    border-width: 0px;
+}
 
 .modal-window {
     display: none;

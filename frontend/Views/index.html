@@ -27,12 +27,13 @@
 
   <!--Основной контент страницы-->
   <div class="page-main-container">
+
     <!--Панель с текущим балансом-->
     <div class="balance-pane">
       <div><span class="balance-header-font">Ваш баланс:</span></div>
       <div class="clearfix" style="margin-top: 25px;">
         <img class="balance-coin-image" src="frontend/Assets/images/coin.png">
-        <span class="balance-font">15</span>
+        <span id="balance-container" class="balance-font">15</span>
         <img class="balance-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
       </div>
     </div>
@@ -45,23 +46,7 @@
       </div>
 
       <!--Сами товары-->
-      <div class="products-container clearfix">
-        <div class="product-card">
-          <div>
-            <img class="product-price-coin" src="frontend/Assets/images/coin.png">
-            <span class="product-price-font">15</span>
-            <img class="product-price-currency-glyph" src="frontend/Assets/images/Tugriki.svg">
-          </div>
-          <img class="product-icon" src="frontend/Assets/images/call_x2.svg">
-          <div>
-            <div class="discount">69%</div>
-            <span class="product-name-font">на звонки ST (x2)</span>
-          </div>
-          <button class="purchase-button" style="width: 135px;
-          height: 49px;">Использовать скидку</button>
-        </div>
-        <div class="product-card">2</div>
-        <div class="product-card">3</div>
+      <div id="products-container" class="products-container clearfix">
       </div>
     </div>
   </div>

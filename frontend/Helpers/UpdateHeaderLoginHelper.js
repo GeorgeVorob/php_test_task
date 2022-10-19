@@ -4,7 +4,7 @@ import { APIService } from "../Services/APIService.js";
 export function UpdateHeaderLoginHelper() {
     let login = CookieService.getCookie('login')
     if (login != "") {
-        APIService.GetUser(login)
+        return APIService.GetUser(login)
             .then((json) => {
                 document.getElementById("login-error-label").innerHTML = "";
                 document
@@ -18,6 +18,8 @@ export function UpdateHeaderLoginHelper() {
                     .innerHTML = "Вы вошли как " + json.user.login;
 
                 CookieService.setCookie("login", json.user.login, 5);
+
+                return json;
             })
             .catch((err) => {
                 CookieService.setCookie("login", "");
@@ -32,5 +34,7 @@ export function UpdateHeaderLoginHelper() {
         document
             .getElementById("login-form")
             .setAttribute("style", "display:block");
+
+        return null;
     }
 }

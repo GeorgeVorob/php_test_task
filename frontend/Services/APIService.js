@@ -10,4 +10,15 @@ export class APIService {
                 }
             })
     }
+    static GetProducts() {
+        return fetch("backend/EndPoints/GetProductsInfo.php")
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    throw new Error();
+                }
+            })
+    }
 }
