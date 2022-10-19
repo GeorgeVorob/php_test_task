@@ -158,6 +158,24 @@ body {
     vertical-align: top;
 }
 
+.login-pane {
+    margin: 8px;
+    position: fixed;
+    display: block;
+    float: left;
+    background: #e5e5e5;
+}
+
+.login-input-field {
+    border-radius: 2px;
+    border-width: 0px;
+}
+
+.login-input-field:focus-visible {
+    outline: none;
+    box-shadow: 0 0 10px #6ad478;
+}
+
 /*Компоненты*/
 .product-card {
     display: inline-block;
@@ -193,8 +211,8 @@ body {
 }
 
 .purchase-button {
-    width: 135px;
-    height: 42px;
+    cursor: pointer;
+    padding: 7px;
     font-family: 'Museo Sans Cyrl';
     font-style: normal;
     font-weight: 600;
@@ -202,17 +220,30 @@ body {
     line-height: 16px;
     text-align: center;
 
-    color: #FFFFFF;
-    background: #00CD52;
+    color: black;
+    background: #fece00;
     border-radius: 5px;
     border-width: 0px;
     transition: 0.3s;
 }
 
 .purchase-button:hover {
-    background: #00a844;
+    background: #ceb02a;
 }
 
+.already-purchased-button {
+    padding: 7px;
+    font-family: 'Museo Sans Cyrl';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #00CD52;
+    border-radius: 5px;
+    border-width: 0px;
+}
 
 .modal-window {
     display: none;
